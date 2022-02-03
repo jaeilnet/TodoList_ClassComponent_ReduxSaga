@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+폴더구조
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+액션타입 constatns.ts
+액션함수 actions.ts
 
-## Available Scripts
+## 루트사가 rootSaga.ts
 
-In the project directory, you can run:
+```js
+// 리듀서 /(사가x)
+export const rootReducer = combineReducers({
+  reducer: todoReducer,
+});
 
-### `npm start`
+// 사가함수 묶음 (지금은 1개뿐)
+function* rootSaga() {
+  yield all([todoRootSaga()]);
+}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+export default rootSaga;
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## index.ts
 
-### `npm test`
+```js
+// 액션과 saga를 묶어준다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export function* todoRootSaga() {
+  yield takeEvery(ADD_TODO, todoSaga);
+}
+```
 
-### `npm run build`
+사가 구조
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+액션타입 정의
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+컴포넌트에서 ADDTODO 가 담긴 aciton(addTodo())을 디스패치하면 그와 연결된 사가 todoSaga가 실행이 되고
+그 안에서는 api 호출을 해서 data를 state에 담을 actino을 정의해서 data를 담아주면 된다.
