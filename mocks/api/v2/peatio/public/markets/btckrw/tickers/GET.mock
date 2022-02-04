@@ -1,0 +1,18 @@
+HTTP/2 200
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS, HEAD
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+
+
+{"at":1543958863,"ticker":{
+    "buy":"11810000",
+    "sell":"11812000",
+    "low":"11796000",
+    "high":"11812000",
+    "last":"11812000",
+    "vol":"0.5",
+    "open":"11800000",
+    "price_change_percent": "+0.10%"
+}}

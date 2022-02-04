@@ -25,7 +25,7 @@ export default rootSaga;
 // 액션과 saga를 묶어준다.
 
 export function* todoRootSaga() {
-  yield takeEvery(ADD_TODO, todoSaga);
+  yield takeEvery(GET_LIST, todoSaga);
 }
 ```
 

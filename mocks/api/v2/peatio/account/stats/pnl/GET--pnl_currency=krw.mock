@@ -1,0 +1,31 @@
+HTTP/2 200
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS, HEAD
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+
+[
+  {
+    "currency":"bch",
+    "pnl_currency":"krw",
+    "total_credit":"303.43",
+    "total_debit":"1.1",
+    "total_credit_value":"90573855.0",
+    "total_debit_value":"29853.0",
+    "average_buy_price":"298500.0",
+    "average_sell_price":"27139.09090909090909090909",
+    "average_balance_price":"298500.0"
+  },
+  {
+    "currency":"btc",
+    "pnl_currency":"krw",
+    "total_credit":"203.582567793",
+    "total_debit":"4.5124566548",
+    "total_credit_value":"1884029277.67058104",
+    "total_debit_value":"16936830.74873704",
+    "average_buy_price":"9254374.27229150834940024054",
+    "average_sell_price":"3753350.34647279289362937018",
+    "average_balance_price":"9251612.7366625145198558"
+  }
+]

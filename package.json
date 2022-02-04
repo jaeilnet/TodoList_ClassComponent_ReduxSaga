@@ -12,13 +12,16 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-redux": "^7.1.22",
     "@types/react-router-dom": "^5.3.3",
+    "antd": "^4.18.5",
     "axios": "^0.25.0",
+    "mockserver": "2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "5",
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
     "redux-saga": "^1.1.3",
     "typesafe-actions": "^5.1.0",
     "typescript": "^4.5.5",
@@ -28,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "mockAPI": "node mocks/mockAPI.js"
   },
   "eslintConfig": {
     "extends": [

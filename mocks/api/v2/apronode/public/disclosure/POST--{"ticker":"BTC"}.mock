@@ -1,0 +1,79 @@
+HTTP/2 200
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, PATCH, DELETE
+access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
+
+{
+  "disclosure": [
+    {
+      "id": 51,
+      "disclosureId": "60d12e06ecc4e43669062110",
+      "ticker": "BTC",
+      "en": "Maiar supports wallet service",
+      "ko": "신규 월렛 지원 (Maiar)",
+      "zh": "新钱包支持 (Maiar)",
+      "url": "https://xangle.io/project/BTC/recent-disclosure/60d12e06ecc4e43669062110",
+      "publishTimestamp": "2021-06-22T00:58:42.705000"
+    },
+    {
+      "id": 52,
+      "disclosureId": "60c6bdcfb25ef55b28864c6f",
+      "ticker": "BTC",
+      "en": "Governance decision: Bitcoin's Taproot Upgrade is approved",
+      "ko": "정책 결정: 비트코인의 Taproot 업그레이드 승인 완료",
+      "zh": "管治: Bitcoin's Taproot Upgrade is approved",
+      "url": "https://xangle.io/project/BTC/recent-disclosure/60c6bdcfb25ef55b28864c6f",
+      "publishTimestamp": "2021-06-14T05:49:37.866000"
+    },
+    {
+      "id": 53,
+      "disclosureId": "60c0652b50a7dbb13c11ae5f",
+      "ticker": "BTC",
+      "en": "Major use-case: El Salvador becomes first country to adopt bitcoin as legal tender after passing law",
+      "ko": "주요 활용 사례: 엘살바도르, 비트코인을 법정통화로 입법화",
+      "zh": "新用例: El Salvador becomes first country to adopt bitcoin as legal tender after passing law",
+      "url": "https://xangle.io/project/BTC/recent-disclosure/60c0652b50a7dbb13c11ae5f",
+      "publishTimestamp": "2021-06-09T07:46:11.083000"
+    },
+    {
+      "id": 54,
+      "disclosureId": "60bdd2c2f96d4c92b61a4c87",
+      "ticker": "BTC",
+      "en": "Major use-case: El Salvador will vote to formally adopt Bitcoin as digital currency",
+      "ko": "주요 활용 사례: 엘살바도르, 비트코인의 공식 통화 여부 투표 진행 예정",
+      "zh": "新用例: El Salvador will vote to formally adopt Bitcoin as digital currency",
+      "url": "https://xangle.io/project/BTC/recent-disclosure/60bdd2c2f96d4c92b61a4c87",
+      "publishTimestamp": "2021-06-07T08:13:39.945000"
+    },
+    {
+      "id": 55,
+      "disclosureId": "60bda098083ca0ada51c5b89",
+      "ticker": "BTC",
+      "en": "[90-day New Low] Active wallet addresses & Transaction fee",
+      "ko": "[90일 신저점] 활성 지갑 주소 & 거래 수수료",
+      "zh": "[90-day New Low] Active wallet addresses & Transaction fee",
+      "url": "https://xangle.io/project/BTC/recent-disclosure/60bda098083ca0ada51c5b89",
+      "publishTimestamp": "2021-06-07T04:49:41.118000"
+    },
+    {
+      "id": 56,
+      "disclosureId": "60b47465649195b09072a1fe",
+      "ticker": "BTC",
+      "en": "[90-day New Low] On-chain transaction volume & transaction fee",
+      "ko": "[90일 신저점] 온체인 거래량 & 거래 수수료",
+      "zh": "[90-day New Low] On-chain transaction volume & transaction fee",
+      "url": "https://xangle.io/project/BTC/recent-disclosure/60b47465649195b09072a1fe",
+      "publishTimestamp": "2021-05-31T06:00:35.888000"
+    },
+    {
+      "id": 57,
+      "disclosureId": "60b475ff8c8411c2bd72a416",
+      "ticker": "BTC",
+      "en": "[52-week New Low] On-chain transaction count & New wallet addresses",
+      "ko": "[52주 신저점] 온체인 거래횟수 & 신규 지갑 주소",
+      "zh": "[52-week New Low] On-chain transaction count & New wallet addresses",
+      "url": "https://xangle.io/project/BTC/recent-disclosure/60b475ff8c8411c2bd72a416",
+      "publishTimestamp": "2021-05-31T05:59:45.967000"
+    }
+  ]
+}

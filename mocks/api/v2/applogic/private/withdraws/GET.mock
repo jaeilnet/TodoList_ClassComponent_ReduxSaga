@@ -1,0 +1,13 @@
+HTTP/2 200
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS, HEAD
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+
+{
+    "limit": "10000.0",
+    "once_limit": "500.0",
+    "period": 24,
+    "withdrawal_amount": "300.0",
+    "currency": null
+}

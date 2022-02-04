@@ -1,0 +1,15 @@
+HTTP/2 200
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS, HEAD
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+
+[
+    [1580515200,"0.0249","0.0249","0.0249","0.0249",250],
+    [1580601600,"0.025","0.025","0.025","0.025",12.89],
+    [1580688000,"0.025","0.025","0.025","0.025",244.97],
+    [1580774400,"0.02","0.022","0.02","0.022",3681.57],
+    [1580860800,"0.021","0.021","0.021","0.021",185.63],
+    [1580947200,"0.02","0.02","0.02","11770000",442.44]
+]

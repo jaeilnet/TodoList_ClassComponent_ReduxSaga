@@ -1,0 +1,11 @@
+HTTP/2 200
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, PATCH, DELETE
+access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
+
+{
+    "state":"account_cancelled",
+    "uid":"ID489F525B1D",
+    "inactivated_at":"2020-13-13",
+    "auth_token": "ID489F525B1DID489F525B1D"
+}

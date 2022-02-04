@@ -1,0 +1,12 @@
+HTTP/2 401
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, PATCH, DELETE
+access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
+
+{
+    "auth_token":"d6d04f84495318fd7438",
+    "auth_token_expires_at":"2021-12-23T03:20:53.162Z",
+    "inactivated_at":"2021-11-01 (KST)",
+    "email": "test@test.com",
+    "state": "account_cancelled"
+}

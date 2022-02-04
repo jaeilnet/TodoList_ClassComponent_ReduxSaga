@@ -1,10 +1,20 @@
-import axios from "axios";
-import { call, put, takeEvery } from "redux-saga/effects";
-import { addTodo, AddTodoType } from "../actions";
-import { ADD_TODO } from "../constants";
+import { call, put } from "redux-saga/effects";
+import { api } from "../../api";
+import {
+  deleteTodo,
+  getList,
+  postFail,
+  postSuccess,
+  postTodo,
+} from "../actions";
+import { DELETE_TODO, GET_LIST, POST_SUCCESS } from "../constants";
 
+export interface TodoResType {
+  id: number;
+  contents: string;
+}
 interface InitialState {
-  todoList: string[];
+  todoList: TodoResType[];
 }
 
 const initialState: InitialState = {
@@ -12,11 +22,21 @@ const initialState: InitialState = {
 };
 
 export const todoReducer = (state = initialState, action: any) => {
+  console.log(action);
   switch (action.type) {
-    case ADD_TODO:
+    case GET_LIST:
+      return {
+        ...state,
+        todoList: action.payload,
+      };
+    case POST_SUCCESS:
       return {
         ...state,
         todoList: state.todoList.concat(action.payload),
+      };
+    case DELETE_TODO:
+      return {
+        ...state,
       };
     // case DELETE_TODO:
     //   return {};
@@ -25,31 +45,36 @@ export const todoReducer = (state = initialState, action: any) => {
   }
 };
 
-const baseUrl = "http://0.0.0.0:9002/api/v2";
+console.log(initialState, "qweqeqew");
 
-export function* mockApiTest() {
-  yield put({ type: "ADD_TODO" });
+// 데이터 담을 사가
+export function* getTodoAPISaga() {
+  try {
+    // api호출
+    const { data } = yield call(api.getApis);
+
+    // api 담기
+    yield put(getList(data));
+  } catch (err) {
+    console.log(err, "err");
+  }
 }
 
-// ????
-const apis = () => {
-  return axios.get(`${baseUrl}/peatio/market/trades`);
-};
-
-const api = {
-  apis,
-};
-
-export function* todoSaga() {
+export function* postTodoAPISaga() {
   try {
-    // mock api test
-    // const apiTEst = axios.get(`${baseUrl}/peatio/market/trades`);
-    // const { data } = yield call(api.apis);
-    // console.log(data);
-    // apiTEst.then((res) => console.log(res));
-    // yield put(());
-    // yield put(addTodo);
+    // post api 호출
+    const { data } = yield call(api.postApi);
+
+    yield put(postSuccess(data));
   } catch (err) {
-    console.log(err);
+    yield put(postFail(new Error()));
   }
+}
+
+export function* deleteTodoAPISaga() {
+  try {
+    const { data } = yield call(() => api.deleteApi(1));
+
+    yield put(deleteTodo(data));
+  } catch (err) {}
 }

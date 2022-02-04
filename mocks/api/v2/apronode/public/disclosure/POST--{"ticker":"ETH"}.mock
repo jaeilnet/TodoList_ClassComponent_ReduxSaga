@@ -1,0 +1,29 @@
+HTTP/2 200
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, PATCH, DELETE
+access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
+
+{
+  "disclosure": [
+    {
+      "id": 1,
+      "disclosureId": "60cfd98812037031e7a30245",
+      "ticker": "ETH",
+      "en": "Milestone achievement: London upgrade testnet deployment announced",
+      "ko": "마일스톤 달성: 런던 업그레이드 테스트넷 배포 발표",
+      "zh": "实现重大里程碑: London upgrade testnet deployment announced",
+      "url": "https://xangle.io/project/ETH/recent-disclosure/60cfd98812037031e7a30245",
+      "publishTimestamp": "2021-06-21T00:42:12.333000"
+    },
+    {
+      "id": 2,
+      "disclosureId": "60c6ee6903c5da1545d5682a",
+      "ticker": "ETH",
+      "en": "Milestone achievement: Solidity 0.8.5 Release Complete",
+      "ko": "마일스톤 달성: Solidity 0.8.5 버전 출시",
+      "zh": "实现重大里程碑: Solidity 0.8.5 Release Complete",
+      "url": "https://xangle.io/project/ETH/recent-disclosure/60c6ee6903c5da1545d5682a",
+      "publishTimestamp": "2021-06-14T08:19:40.639000"
+    }
+  ]
+}

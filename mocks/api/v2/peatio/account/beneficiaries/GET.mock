@@ -1,0 +1,8 @@
+HTTP/2 200
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS, HEAD
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+
+[{"id":4,"currency":"krw","uid":"IDAD61A7256F","name":"우리은행","description":null,"data":{"bank_code":"020","bank_name":"우리은행","full_name":"정명훈","account_number":"10*******0126"},"state":"active","sent_at":"2020-05-31T13:39:17Z"}]

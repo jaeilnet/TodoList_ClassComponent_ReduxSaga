@@ -1,11 +1,17 @@
 import { combineReducers } from "redux";
 import { all } from "redux-saga/effects";
 import { todoRootSaga } from "./saga";
-import { todoReducer } from "./saga/reducer";
+import { TodoResType, todoReducer } from "./saga/reducer";
+
+export interface RootSaga {
+  todo: {
+    todoList: TodoResType[];
+  };
+}
 
 // 리듀서 /(사가x)
 export const rootReducer = combineReducers({
-  reducer: todoReducer,
+  todo: todoReducer,
 });
 
 // 사가함수 묶음

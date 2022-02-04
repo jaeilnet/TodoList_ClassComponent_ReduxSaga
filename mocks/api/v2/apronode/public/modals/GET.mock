@@ -1,0 +1,109 @@
+HTTP/2 200
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, PATCH, DELETE
+access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
+
+[
+    {
+        "id":"modal6548",
+        "title":{
+            "ko":"고객확인제도 알아보기",
+            "zh":"CDD / EDD Preview",
+            "en":"CDD / EDD Preview"
+            },
+        "image":{
+            "web":{
+                "url":{
+                    "ko":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko3.png",
+                    "en":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_en3.png",
+                    "zh":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_en3.png"
+                    },
+                "size":{
+                    "width":410,
+                    "height":230
+                    }
+                },
+            "mobile":{
+                "url":{
+                    "ko":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko3.png",
+                    "en":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_en3.png",
+                    "zh":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_en3.png"
+                    },
+                "size":{
+                    "width":410,
+                    "height":230
+                    }
+                }
+            },
+        "link":"https://www.aprobit.com/client-check",
+        "priority":"3"
+    },
+    {
+        "id":"modal1243",
+        "title":{
+            "ko":"오입금 주의사항 안내",
+            "zh":"오입금 주의사항 안내",
+            "en":"오입금 주의사항 안내"
+            },
+        "image":{
+            "web":{
+                "url":{
+                    "ko":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko8.png",
+                    "en":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko8.png",
+                    "zh":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko8.png"
+                    },
+                "size":{
+                    "width": 0,
+                    "height":230
+                    }
+                },
+            "mobile":{
+                "url":{
+                    "ko":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko8.png",
+                    "en":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko8.png",
+                    "zh":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko8.png"
+                    },
+                "size":{
+                    "width":600,
+                    "height":230
+                    }
+                }
+            },
+        "link":"",
+        "priority":"1"
+    },
+    {
+        "id":"modal8579",
+        "title":{
+            "ko":"가상자산사업자 신고수리 완료",
+            "zh":"가상자산사업자 신고수리 완료",
+            "en":"가상자산사업자 신고수리 완료"
+            },
+        "image":{
+            "web":{
+                "url":{
+                    "ko":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko5.png",
+                    "en":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko5.png",
+                    "zh":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko5.png"
+                    },
+                "size":{
+                    "width":410,
+                    "height":230
+                    }
+                },
+            "mobile":{
+                "url":{
+                    "ko":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko5_mobile.png",
+                    "en":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko5_mobile.png",
+                    "zh":"https://s3.ap-northeast-2.amazonaws.com/img.aprobit.com/modal/landing_ko5_mobile.png"
+                    },
+                "size":{
+                    "width":410,
+                    "height":230
+                    }
+                }
+            },
+        "link":"https://bit.ly/3mDV98S",
+        "priority":"2"
+    }
+]

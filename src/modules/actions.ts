@@ -1,25 +1,77 @@
-import { ADD_TODO, LOAD_TODOLIST } from "./constants";
+import {
+  DELETE_TODO,
+  GET_LIST,
+  GET_TODO,
+  POST_FAIL,
+  POST_SUCCESS,
+  POST_TODO,
+} from "./constants";
+import { TodoResType } from "./saga/reducer";
 
 // 액션함수 타입
-export interface AddTodoType {
-  type: typeof ADD_TODO;
+export interface GetListType {
+  type: typeof GET_LIST;
+  payload?: TodoResType[];
 }
 
-export interface LoadTodoType {
-  type: typeof LOAD_TODOLIST;
-  payload?: any;
+export interface GetTodoAPI {
+  type: typeof GET_TODO;
+}
+
+export interface PostTodoAPI {
+  type: typeof POST_TODO;
+}
+
+export interface PostSuccess {
+  type: typeof POST_SUCCESS;
+  payload?: TodoResType[];
+}
+
+export interface PostFail {
+  type: typeof POST_FAIL;
+}
+
+export interface DeleteAPI {
+  type: typeof DELETE_TODO;
+  payload: number;
 }
 
 // 액션함수
-export const addTodo = (): AddTodoType => {
+export const getList = (payload: TodoResType[]): GetListType => {
   return {
-    type: ADD_TODO,
+    type: GET_LIST,
+    payload,
   };
 };
 
-export const LoadTodo = (): LoadTodoType => {
+export const getTOdo = (): GetTodoAPI => {
   return {
-    type: LOAD_TODOLIST,
-    // payload:
+    type: GET_TODO,
+  };
+};
+
+export const postTodo = (): PostTodoAPI => {
+  return {
+    type: POST_TODO,
+  };
+};
+
+export const postSuccess = (payload: TodoResType[]): PostSuccess => {
+  return {
+    type: POST_SUCCESS,
+    payload,
+  };
+};
+
+export const postFail = (err: unknown): PostFail => {
+  return {
+    type: POST_FAIL,
+  };
+};
+
+export const deleteTodo = (id: number): DeleteAPI => {
+  return {
+    type: DELETE_TODO,
+    payload: id,
   };
 };

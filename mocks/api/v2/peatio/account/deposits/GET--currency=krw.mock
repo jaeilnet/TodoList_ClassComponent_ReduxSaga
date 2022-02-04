@@ -1,0 +1,31 @@
+HTTP/2 200
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS, HEAD
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+
+[
+  {
+    "id":3,
+    "currency":"krw",
+    "amount":"10000.0",
+    "fee":"0.0",
+    "txid":null,
+    "state":"accepted",
+    "created_at":"2019-11-01T17:04:32+01:00",
+    "completed_at":"2019-11-01T17:04:48+01:00",
+    "tid":"TIDD2408AC769"
+  },
+    {
+    "id":28,
+    "currency":"krw",
+    "amount":"30000.0",
+    "fee":"0.0",
+    "txid":null,
+    "state":"submitted",
+    "created_at":"2019-11-01T17:04:32+01:00",
+    "completed_at":"2019-11-01T17:04:48+01:00",
+    "tid":"TIDD2408AC769"
+  }
+]
