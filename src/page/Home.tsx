@@ -6,11 +6,10 @@ import TodoList from "../components/TodoList";
 export class Home extends Component {
   render() {
     return (
-      <Row justify="center" align="middle">
+      <Row justify="center" align="middle" wrap>
         <Col span={12}>
           <Forms />
           <TodoList />
-          {/* <Items todoList={this.props.todoList} /> */}
         </Col>
       </Row>
     );

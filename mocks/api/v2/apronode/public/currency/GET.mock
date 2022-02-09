@@ -1,7 +1,0 @@
-HTTP/2 200
-access-control-allow-origin: *
-access-control-allow-methods: GET, POST, PUT, PATCH, DELETE
-access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization
-
-
-{"BTC":{"id":1,"currencyId":"BTC","ko":"비트코인","en":"Bitcoin","zh":"Bitcoin"},"ETH":{"id":21,"currencyId":"ETH","ko":"이더리움","en":"Ethereum","zh":"Ethereum"},"XRP":{"id":22,"currencyId":"XRP","ko":"리플","en":"Ripple","zh":"Ripple"},"USDT":{"id":23,"currencyId":"USDT","ko":"테더","en":"Tether","zh":"Tether"},"RINGX":{"id":24,"currencyId":"RINGX","ko":"링엑스 플랫폼","en":"RINGX Platform","zh":"RINGX 平台"},"BCH":{"id":25,"currencyId":"BCH","ko":"비트코인캐시","en":"Bitcoin Cash","zh":"Bitcoin Cash"},"EOS":{"id":26,"currencyId":"EOS","ko":"이오스","en":"EOS","zh":"EOS"},"NIAX":{"id":27,"currencyId":"NIAX","ko":"니아엑스","en":"NIAX","zh":"NIAX"},"LTC":{"id":28,"currencyId":"LTC","ko":"라이트코인","en":"Litecoin","zh":"Litecoin"},"XLM":{"id":29,"currencyId":"XLM","ko":"스텔라루멘","en":"Stellar","zh":"Stellar"},"LINK":{"id":30,"currencyId":"LINK","ko":"체인링크","en":"ChainLink","zh":"ChainLink"},"DAI":{"id":31,"currencyId":"DAI","ko":"다이","en":"Dai","zh":"Dai"},"MKR":{"id":32,"currencyId":"MKR","ko":"메이커","en":"Maker","zh":"Maker"},"BAL":{"id":33,"currencyId":"BAL","ko":"밸런서","en":"Balancer","zh":"Balancer"},"LEND":{"id":34,"currencyId":"LEND","ko":"에이브","en":"LEND","zh":"LEND"}}

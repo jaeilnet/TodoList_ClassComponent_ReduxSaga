@@ -1,0 +1,8 @@
+export const FETCH_SUCCESS = "FETCH_SUCCESS";
+export const FETCH_FAIL = "FETCH_FAIL";
+
+export const GET_TODO_API = "GET_TODO_API";
+export const POST_TODO_API = "POST_TODO_API";
+export const DELETE_TODO_API = "DELETE_TODO_API";
+export const PATCH_TODO_TEXT_API = "PATCH_TODO_TEXT_API";
+export const PATCH_TODO_STATUS_API = "PATCH_TODO_STATUS_API";

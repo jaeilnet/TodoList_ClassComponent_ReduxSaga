@@ -1,20 +1,24 @@
+import { createBrowserHistory } from "history";
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import Home from "./page/Home";
+import Layout from "./routes/Layout";
 
-export class App extends Component {
+interface AppProps {
+  // history: History;
+}
+
+type Props = AppProps;
+
+export const history = createBrowserHistory();
+export class App extends Component<Props> {
   render() {
     return (
-      <div>
-        <Header />
-        <BrowserRouter>
-          <Route>
-            <Home />
-          </Route>
-        </BrowserRouter>
-      </div>
+      <>
+        <Router history={history}>
+          <Layout />
+        </Router>
+      </>
     );
   }
 }

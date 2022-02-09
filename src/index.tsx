@@ -4,11 +4,14 @@ import "antd/dist/antd.variable.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import create from "./modules/store";
+import store, { sagaMiddleWare } from "./modules/store";
+import rootSaga from "./modules";
+
+sagaMiddleWare.run(rootSaga);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={create}>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,

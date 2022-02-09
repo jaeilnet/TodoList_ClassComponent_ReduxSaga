@@ -4,4 +4,4 @@ Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS, HEAD
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Credentials: true
 
-[{"id":1,"contents": "빨래"},{"id":2,"contents": "밥"},{"id":3,"contents": "설거지"},{"id":4,"contents": "운동"},{"id":5,"contents": "이것저것"}]
+[{"id":1,"status":false,"contents": "빨래"},{"id":2,"status":false,"contents": "밥"},{"id":3,"status":false,"contents": "설거지"},{"id":4,"status":false,"contents": "운동"},{"id":5,"status":false,"contents": "이것저것"}]

@@ -1,48 +1,65 @@
-import axios from "axios";
-
-export interface ApitTest {
-  // metho
-}
+import axios, { AxiosResponse } from "axios";
 
 const baseUrl = "http://0.0.0.0:9002/api/v2";
-
-// export const axiosAPi = (method: any, url: string) => {
-//   switch (method) {
-//     case method.get:
-//       axios.get(`${baseUrl}/url`);
-//       break;
-//     case method.post:
-//       axios.post(baseUrl, url);
-//       break;
-//     default:
-//       break;
-//   }
-// };
-
-// ????
 
 const instance = axios.create({
   baseURL: baseUrl,
 });
 
-const getApis = () => {
-  return instance.get(`${baseUrl}/todo`);
+const getApi = async (): Promise<AxiosResponse> => {
+  return await instance.get(`${baseUrl}/todo`);
 };
 
-const postApi = () => {
-  return instance.post(`${baseUrl}/todo`);
+const postApi = async (): Promise<AxiosResponse> => {
+  return await instance.post(`${baseUrl}/todo`);
 };
 
-const deleteApi = (id: number) => {
-  return instance.delete(`${baseUrl}/todo`, {
+const deleteApi = async (id: number): Promise<AxiosResponse> => {
+  return await instance.delete(`${baseUrl}/todo`, {
     data: {
-      data: 1,
+      id: id,
     },
   });
 };
 
+const patchStatusApi = async (id: number): Promise<AxiosResponse> => {
+  return await instance.patch(`${baseUrl}/todo`, {
+    id: id,
+  });
+};
+
+const patchTextAPI = async (
+  id: number,
+  contents: string
+): Promise<AxiosResponse> => {
+  return await instance.patch(`${baseUrl}/todo/editTodo`, {
+    id: id,
+    contents,
+  });
+};
+
+const postLoginAPI = async (
+  id: string,
+  password: string
+): Promise<AxiosResponse> => {
+  return await instance.post(`${baseUrl}/todo/auth/auth0`, {
+    userId: id,
+    password,
+  });
+};
+
+const loginCheckAPI = async (token: string): Promise<AxiosResponse> => {
+  return await instance.post(`${baseUrl}/todo/auth/auth0`, {
+    token: token,
+  });
+};
+
 export const api = {
-  getApis,
+  getApi,
   postApi,
   deleteApi,
+  patchStatusApi,
+  patchTextAPI,
+  postLoginAPI,
+  loginCheckAPI,
 };

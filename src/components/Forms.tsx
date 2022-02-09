@@ -1,71 +1,66 @@
 import { Button, Col, Input, Row } from "antd";
 import React, { Component } from "react";
 import { connect, MapDispatchToProps } from "react-redux";
-import { postTodo } from "../modules/actions";
-
-interface Props {}
+import styled from "styled-components";
+import { postTodoAPI } from "../modules/todo/actions";
 
 interface State {
-  todoValue: string | undefined;
+  todoText: string;
 }
 
 interface DispatchProps {
-  postTodo: typeof postTodo;
+  postTodo: typeof postTodoAPI;
 }
 
-export class Forms extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
+type Props = DispatchProps;
 
-    this.state = {
-      todoValue: "",
-    };
-  }
+export class Forms extends Component<Props, State> {
+  state = {
+    todoText: "",
+  };
+
+  onTodoText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({
+      todoText: e.target.value,
+    });
+  };
+
+  onAddTodo = () => {
+    if (this.state.todoText.trim().length <= 0) {
+      return alert("todo 적어주세요");
+    }
+    this.props.postTodo(this.state.todoText);
+  };
 
   render() {
-    console.log(this.state.todoValue);
+    const { todoText } = this.state;
     return (
-      <Row justify="center" align="middle">
-        <Col span={20}>
-          <Input
-            placeholder="Todo"
-            value={this.state.todoValue}
-            onChange={onTodoValue.bind(this)}
-          />
-        </Col>
-        <Col span={4}>
-          <Button type="primary" onClick={onAddTodo.bind(this)}>
-            투두 등록
-          </Button>
-        </Col>
-      </Row>
+      <Grid>
+        <Input
+          placeholder="Todo"
+          value={todoText}
+          onChange={this.onTodoText}
+          maxLength={50}
+        />
+        <Button type="primary" onClick={this.onAddTodo}>
+          투두 등록
+        </Button>
+      </Grid>
     );
   }
 }
-
-function onTodoValue(this: any, e: React.ChangeEvent<HTMLInputElement>) {
-  this.setState({
-    todoValue: e.target.value,
-  });
-}
-
-function onAddTodo(this: any) {
-  // post
-
-  this.props.postTodo();
-  console.log(this.state.todoValue);
-}
-
-const mapStateToProps = () => {};
 
 const mapDispatchToProps: MapDispatchToProps<DispatchProps, {}> = (
   dispatch
 ) => {
   return {
-    postTodo: () => dispatch(postTodo()),
+    postTodo: (text: string) => dispatch(postTodoAPI(text)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Forms);
+export default connect(null, mapDispatchToProps)(Forms);
 
-// export default Forms;
+const Grid = styled.div`
+  display: flex;
+  margin-bottom: 5px;
+`;

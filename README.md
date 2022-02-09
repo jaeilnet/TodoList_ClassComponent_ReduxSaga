@@ -1,9 +1,22 @@
-폴더구조
+사가 폴더구조
 
-액션타입 constatns.ts
-액션함수 actions.ts
+```
+modules = [{
+  auth : {
+    saga : {
+        index.ts : auth에 대한 RootSaga
+    },
+    action.ts : 액션함수 + @type
+    constatns.ts : 액션타입 + @type
+    reducer.ts : 리듀서 + 사가함수
+   },
+  },
+  index.ts : rootSaga
+  store.ts : store
+]
+```
 
-## 루트사가 rootSaga.ts
+## **루트사가 rootSaga.ts** (modules > index.ts)
 
 ```js
 // 리듀서 /(사가x)
@@ -19,19 +32,14 @@ function* rootSaga() {
 export default rootSaga;
 ```
 
-## index.ts
+## **authRootSaga** (modules > auth > saga > index.ts)
 
 ```js
-// 액션과 saga를 묶어준다.
-
 export function* todoRootSaga() {
-  yield takeEvery(GET_LIST, todoSaga);
+  yield takeLatest(액션타입, 사가함수);
 }
 ```
 
 사가 구조
 
-액션타입 정의
-
-컴포넌트에서 ADDTODO 가 담긴 aciton(addTodo())을 디스패치하면 그와 연결된 사가 todoSaga가 실행이 되고
-그 안에서는 api 호출을 해서 data를 state에 담을 actino을 정의해서 data를 담아주면 된다.
+리듀서 함수들을 combined 으로 묶어주고 사가 함수들은 rootSaga 로 묶는다.
